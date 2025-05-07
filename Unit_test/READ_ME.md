@@ -49,3 +49,28 @@ python -m unittest discover -s tests -p "test_*.py" -v
 ✅ Option 2: Add Print Statements (Not Recommended for Final Code)
 
 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1. For Coverage useful for gitflow:
+
+>> install coverage : pip install coverage
+
+Run the test with coverage which will generate .coverage file
+>> coverage run -m unittest discover -s tests -p "test_*.py" 
+
+Generate report :
+>> coverage report 
+Name                         Stmts   Miss  Cover
+------------------------------------------------
+src\calculator.py                5      0   100%
+src\string_utils.py              4      0   100%
+tests\test_calculator.py        11      0   100%
+tests\test_string_utils.py       7      0   100%
+------------------------------------------------
+TOTAL                           27      0   100%
+
+Generate xml :
+>> coverage xml
+
+
