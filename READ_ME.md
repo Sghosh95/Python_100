@@ -27,6 +27,7 @@ assertRaises(Error, func)	Checks if error is raised
 
 # How to run coverage if there are multiple test files
 
+## Structure
 1. follow the structure 
 
 your_project/
@@ -52,21 +53,41 @@ python -m unittest discover -s tests -p "test_*.py" -v
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+## Coverage
+
+🔍 What is Code Coverage?
+It tells you how much of your codebase is executed when running tests. 
+For example:
+
+>>100% coverage = All lines of your code were run by tests.
+
+>>70% coverage = 30% of your code was never tested.
+
+| Tool               | Purpose                                       |
+| ------------------ | --------------------------------------------- |
+| **Codecov**        | Upload `coverage.xml` to visualize in a UI    |
+| **SonarQube**      | Analyze test coverage as part of code quality |
+| **GitHub Actions** | Show badges or fail builds on low coverage    |
+
+
 1. For Coverage useful for gitflow:
 
 >> install coverage : pip install coverage
 
 Run the test with coverage which will generate .coverage file
+
 >> coverage run -m unittest discover -s tests -p "test_*.py" 
 
 Generate report :
 >> coverage report 
-Name                         Stmts   Miss  Cover
-------------------------------------------------
-src\calculator.py                5      0   100%
-src\string_utils.py              4      0   100%
-tests\test_calculator.py        11      0   100%
-tests\test_string_utils.py       7      0   100%
+
+
+Name                        | Stmts  | Miss | Cover
+---------------------------------------------------
+src\calculator.py           |     5  |    0 | 100%
+src\string_utils.py         |     4  |    0 | 100%
+tests\test_calculator.py    |    11  |    0 | 100%
+tests\test_string_utils.py  |     7  |    0 | 100%
 ------------------------------------------------
 TOTAL                           27      0   100%
 
