@@ -18,9 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install coverage
-          pip install numpy
-          pip install pandas
+          pip install -r requirement.txt
 
       - name: Run Unit Tests with Coverage
         run: |

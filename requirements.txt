@@ -1,0 +1,4 @@
+coverage
+numpy
+pandas
+mysql-connector-python
